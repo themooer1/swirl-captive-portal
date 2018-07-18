@@ -128,7 +128,10 @@ def testVoucher():
     GuestServer.vouchers.append(v)
     return v
 
-if __name__ == "__main__":
+def main():
     GuestServer.start()
     print(testVoucher())
     app.run(host='0.0.0.0')
+
+if __name__ == "__main__":
+    main()
