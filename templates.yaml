@@ -1,0 +1,2 @@
+voucher: <speak>You may now connect to {{SSID}} using the password <prosody rate="x-slow">{{voucher}}</prosody>, which is spelled <prosody rate="x-slow"><say-as interpret-as="spell-out">{{voucher}}</say-as></prosody>.  The words are separated by spaces.</speak>
+welcome: Welcome!  To connect to the internet, join {{SSID}} and follow the instructions on the device.
