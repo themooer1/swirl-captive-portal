@@ -10,7 +10,7 @@ setup(
     description='RADIUS server, which generates tokens using Alexa.',
     entry_points={
         'console_scripts':[
-            'swirl = swirl.guest:main'
+            'swirl = radiusTest.swirl.guest:main'
         ]
     }
 )
