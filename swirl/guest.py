@@ -1,5 +1,3 @@
-from hashlib import md5
-from _hashlib import HASH
 from pyrad import dictionary, packet, server
 from flask import Flask, render_template
 from flask_ask import Ask, statement
@@ -7,10 +5,22 @@ from functools import reduce
 import time
 from threading import Thread
 import random
+import os
 
-SHARED_SECRET = b"fgtbon23ruwego8qhwujp"
+
+SHARED_SECRET = b"ol7t623m09ipN"
 VOUCHER_LEN = 4
-WIFI_SPOKEN_NAME = "Eugene Guest"
+WIFI_SPOKEN_NAME = "Guest WiFi"
+
+if 'radius_secret' in os.environ:
+    SHARED_SECRET = os.environ['radius_secret'].encode()
+
+if 'token_length' in os.environ:
+    VOUCHER_LEN = int(os.environ['token_length'])
+
+if 'network_name' in os.environ:
+    WIFI_SPOKEN_NAME = os.environ['network_name']
+
 
 with open("google-10000-english-no-swears.txt", 'r') as fp:
     words = fp.read().split("\n")
