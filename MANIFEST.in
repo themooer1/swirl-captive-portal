@@ -1,0 +1,3 @@
+include swirl/*
+include LICENSE
+include requirements.txt

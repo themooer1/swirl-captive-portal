@@ -7,6 +7,11 @@ from threading import Thread
 import random
 import os
 
+# CD into script dir
+print(os.getcwd())
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+print(os.getcwd())
+
 
 SHARED_SECRET = b"ol7t623m09ipN"
 VOUCHER_LEN = 4
